@@ -1,0 +1,39 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>货币汇率</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>货币汇率</h1>
+        <div id="rates">
+            <table>
+                <tr>
+                    <th>售出时间</th>
+                    <th>货币</th>
+                    <th>售出汇率</th>
+                </tr>
+                {% for rate in rates %}
+                <tr>
+                    <td>{{ rate[0] }}</td>
+                    <td>{{ rate[1] }}</td>
+                    <td>{{ rate[2] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div id="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="/static/script.js"></script>
+</body>
+</html>
+
+
+
+
